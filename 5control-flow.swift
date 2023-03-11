@@ -170,3 +170,37 @@ default:
 }
 print("There are \(naturalCount) \(countedThings).")
 // Prints "There are dozens of moons orbiting Saturn."
+
+var iam: String? = "Happy Sunday" 
+print(iam)
+
+var exampleString: String? = "sagar"
+for _ in 0..<1 {
+    guard let exampleString = exampleString else {
+        print("There is no value in example String")
+        break
+    }
+    print("There is value in example String as \"\(exampleString)\"")
+}
+
+
+var phone: String?
+
+if let phone = phone {
+    print("Calling " + phone)
+}
+
+func nameCheck() {
+    var name: String? = "sagar"
+    guard let myName = name else {
+        print("Name is not defined")
+        return
+    }
+    print("My name is \(myName)")
+}
+
+nameCheck()
+
+let name: String? = nil
+let unwrappedName = name ?? "Anonymous"
+print(unwrappedName)
