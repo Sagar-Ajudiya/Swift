@@ -325,3 +325,20 @@ input()
 // }
 
 // var add = calculator(operation: "+")
+
+
+func operate(symbol: String) -> (Int, Int) -> Int {
+    func add(number1: Int, number2: Int) -> Int {
+        return number1 + number2
+    }
+    func subtract(number1: Int, number2: Int) -> Int {
+        return number1 - number2
+    }
+    
+    let operation = (symbol == "+") ? add : subtract
+    return operation
+}
+
+let result = operate(symbol: "-")
+let ans = result(2,2)
+print("Answer is:", ans)
